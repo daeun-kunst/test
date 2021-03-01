@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FirstProject</title>
+</head>
+<style>
+  .head {
+    padding-top: 20%;
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 50px;
+  }
+
+  .but {
+    font-weight: bold;
+    font-size: 4rem;
+  }
+
+  .but_btn {
+    width: 70px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  body {
+    font-size: 3rem;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+
+<body>
+  <h1 class="head">Useless Information +
+    <span class="but">But</span> + Main Purport
+  </h1>
+  <br>
+  <br>
+  <br>
+  I don't want to be mean,
+  <input class="but_btn" type="button" value="but" onclick="onOffHandler(this);">
+  <span class="change">I am just wondering, why you like me, despite I don't like you.</span>
+  <br><br><br>I am not a sexist,
+  <input class="but_btn" type="button" value="but" onclick="onOffHandler(this);">
+  <span class="change">I am telling you a fact, that men are physically stronger than women.</span>
+  <br><br><br>I don't want to intterupt you,
+  <input class="but_btn" type="button" value="but" onclick="onOffHandler(this);">
+  <span class="change">Do you have time?</span>
+  <script>
+    var Change = {
+      setColor: function(color) {
+        document.querySelector('.change').style.color = color;
+      },
+      setBackgroundColor: function(color) {
+        document.querySelector('.change').style.backgroundColor = color;
+      }
+    }
+    var Body = {
+      setBackgroundColor: function(color) {
+        document.querySelector('body').style.backgroundColor = color;
+      }
+    }
+
+    function onOffHandler(self) {
+      if (self.value === 'but') {
+        Change.setColor('white');
+        Change.setBackgroundColor('black');
+        Body.setBackgroundColor('black');
+        self.value = 'But';
+      } else {
+        Change.setColor('white');
+        Change.setBackgroundColor('white');
+        Body.setBackgroundColor('white');
+        self.value = 'but';
+      }
+    }
+  </script>
+</body>
+
+</html>
