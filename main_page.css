@@ -1,0 +1,89 @@
+html{
+  width: 100vw;
+}
+
+body{
+  margin:2px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: inherit;
+  height: 1000px;
+}
+
+.title {
+position: fixed;
+width:100%;
+right:0;
+left:0;
+text-align: right;
+padding: 10px;
+font-size: 1.5rem;
+font-weight: bold;
+}
+
+.texts {
+text-align: right;
+position: sticky;
+top: 30px;
+}
+
+.first{
+  align-self: flex-start;
+  width: 90%;
+}
+
+.but {
+  margin-top: 10%;
+  width:90%;
+}
+
+.second{
+  align-self: flex-end;
+  right: 0;
+}
+
+.lecture {
+  width:80%;
+}
+
+.figure1{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 45px;
+  height: 36px;
+  border-radius:30px 30px 10px 10px;
+  border: 2px solid black;
+  animation: MoveUpDown 7s linear infinite;
+}
+@keyframes MoveUpDown {
+    0% 100% {
+      transform: translateY(-200px);
+    } /*시간을 0에서100으로 보고 0과 100일때 위치 지정*/
+    50% {
+      transform: translateY(-400px);
+    }
+  }
+
+.third {
+align-self: flex-end;
+}
+
+.geo {
+  width: 60%;
+}
+
+.prejudice {
+align-items: flex-end;
+}
+
+.footer {
+align-items: flex-end;
+}
